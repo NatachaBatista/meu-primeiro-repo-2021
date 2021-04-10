@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+
+
+
+.header {background-color: #232323;
+       color: white;     
+       overflow: auto;
+       border-bottom: 3px solid #054f77;
+       padding-top: 20px;
+       padding-bottom: 10px;
+
+}
+
+.container {width: 80%;
+ margin: auto;
+}
+
+
+.navbar {
+list-style: none;
+float: right;
+color: white;
+
+
+
+}
+
+.navbar a {
+color:white;
+
+}
+
+
+
+
+.titulo {
+margin: 0;
+float: left;
+color: #AC3B2B;
+
+
+}
+
+.header .navbar li { 
+display: inline;
+margin-left: 10px;
+text-transform: uppercase;
+}
+
+.ti {
+color:white;
+}
+
+.lih { 
+color:#AC3B2B;
+
+
+}
+
+/* Banner */
+
+.destaque {  
+color: #AC3B2B;
+
+}
+
+.banner { 
+text-align: center;
+background-color: #b1b1b1; /*cor de fundo em casos que a imagem a ainda n carregou*/
+background-image: url(../img/banner-fundo-big.jpeg);
+background-repeat: no-repeat; /* para a imagem n repetir*/
+background-size: cover; /*para a imagem se ajustar ao tamanho da div banner*/
+height: 300px;
+
+}
+
+.banner h1 {
+margin: 0%;
+font-size: 50px;
+padding-top: 100px; /* margem interna parte de cima do h1*/
+}
+
+.banner h3 {
+color: #535353;
+
+
+}
+
+.saiba-mais button {
+border: 0px;
+background-color:  #AC3B2B;
+color: white;
+text-transform: uppercase; /*deixar em caps*/
+padding: 10px 30px;
+margin-top: 30px;
+cursor: pointer;
+}
+
+.saiba-mais { 
+text-align: center;
+background-color:black;
+height: 90px;
+}
+
+.box img {
+height: 100px;
+}
+
+.box {
+overflow: auto;
+float:left;
+text-align: center;
+
+
+}
+
+.box-item { 
+text-align: center;
+width: 32%;
+padding:3%;
+margin: auto;
+align-items: center;
+
+}
+
+/*footer*/
+
+.footer {
+text-align: center;
+background-color:  #AC3B2B;
+overflow: auto;
+width: 100%;
+
+}
+
+.footer h3 {
+margin: 0;
+padding-top: 30px;
+font-weight: 100; /*peso da fonte*/
+color: black;
+
+
+}
+
+.footer h3 a {
+color: black;
+}
+
+a {
+text-decoration: none;
+color: white;
+}
+
+a :hover {
+font-weight: 700;
+}
+
+
+/* estilo do login */
+
+.pag-login {
+padding-top: 50px;
+background-color: white;
+height: 500px;
+background-image: url(../img/Buffer-pana.svg);
+background-repeat: no-repeat;
+background-position-x: right;
+background-position-y: 200px;
+background-size: 300px;
+margin-right: 200px;
+margin-left: 100px;
+}
+
+.box-login {
+background-color: #e2dada;
+width: 40%;
+margin-left: 100px; /* centralizou o formulário */
+text-align:center;
+box-shadow: 5px 7px 13px 1px #054f77;
+
+}
+
+.box-login h1 {
+margin: 0;
+color:#054f77;
+}
+
+form img {
+height: 100px;
+}
+
+form button {
+border: 0px;
+background-color: #054f77;
+color: white;
+text-transform: uppercase; /*deixar em caps*/
+padding: 10px 30px;
+margin-top: 30px;
+cursor: pointer;
+border-radius: 10px;
+}
+

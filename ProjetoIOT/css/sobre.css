@@ -91,10 +91,20 @@ text-transform: uppercase;
  width: 40%;
  font-weight: 50;
  font-size: 15px;
+ box-shadow: 5px 7px 13px 1px black;
 }
 
 .img2 {
   height: 150px;
   float: right;
 
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a :hover {
+  font-weight: 700;
 }
