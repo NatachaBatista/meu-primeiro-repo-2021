@@ -8,7 +8,7 @@
     <title>ProjetoIOT</title>
     <!--Link para código do ChartsJS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-    
+    <link rel="stylesheet" href="css/grafico.css">
 <style>
     .meu-grafico {
     width: 60%;
@@ -19,14 +19,13 @@
 </head>
 
 <body>
+    <style></style>
     <!--Coloque sempre o gráfico em uma div, fica mais fácil para ajustar na página-->
-    <div class="meu-grafico">
+    <div class="meu-grafico" >
         <!--Gráfico virá aqui-->
         <canvas id="myChart"></canvas>
     </div>
    
-  
-  <center> <h3 style="color:#AC3B2B;"> 90% dos alunos trabalham na área de TI, venha fazer parte desta parcela você também!</h3> </center>
 </body>
 
 </html>
@@ -51,7 +50,7 @@
             // Primeiro dataset    
             {
                 // Qual o título deste dataset?
-                label: "Porcentagem",
+                label: "Porcentagem Concluintes",
                 // Dados? Lembre-se, respectivos a labels.
                 data: [80,20],
                 // expessura da linha
@@ -63,7 +62,16 @@
                 backgroundColor: 'transparent',
             },
 
-        
+            // Segundo dataset
+            {
+                // igual o anterior. Mas, aqui, type line
+                type: 'line',
+                label: "Porcentagem Trabalhando na Área",
+                data: [90, 10],
+                borderWidth: 10,
+                borderColor: '#AC3B2B',
+                backgroundColor: 'transparent'
+            }
             ]
         },
         
@@ -76,7 +84,7 @@
                 // tamanho do texto
                 fontSize: 20,
                 // texto no titulo
-                text: "Porcentagem de Alunos Concluintes",
+                text: "Concluintes X Trabalhando na Área",
                 // onde? right? left? top?
                 position: 'top',
             },
@@ -100,5 +108,5 @@
     })
 
     // mudando cor de fonte de tudo
-    Chart.defaults.global.defaultFontColor = "#AC3B2B";
+    Chart.defaults.global.defaultFontColor = "black";
 </script>
