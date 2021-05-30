@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto IoT - Tempo Real</title>
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="shortcut icon" href="img/Nmusic-logo.png">
+    <script type="text/javascript" src="funcoes.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <!--header inicio-->
+
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><span class="highlight">NMusic</h1>
+            <div class="usuario">
+                <h3>Bem-vindo (a)</h3>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="grafico-chartjs.html">Pesquisa Musica</a></li>
+                    <li><a href="#" class="highlight" onclick="logoff()">LOGOUT</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    </head>
+
+    <body>
+
+
+        <div class=primeira_tela id=tela1>
+            <center>
+                <h1 class="titulo_tela1"> Vamor começar?</h1>
+
+                <img src="img/q50SkQP.gif" alt="" class="img_tela1"> <br> <br>
+
+                <button onclick="tela_um()">Iniciar</button>
+            </center>
+        </div>
+
+        <div id="tela2" style="display: none;">
+            <center>
+
+                <div class=quiz>
+                    <h1 id="span_pergunta" class=span_style> Qual o grupo de RAP nacional mais famoso do Brasil?</h1>
+                    <br> <br>
+                    <center>
+                        <div id="imagem_dica">
+                            <img src="img/racionais.jpg" alt="" height="300px">
+                        </div>
+                    </center> <br>
+                    <input type="text" placeholder="eu sei que você consegue essa" class="input-quiz"
+                        id="input_respostas">
+                    <br>
+                    <button onclick="verificar1()">Verificar</button>
+
+                </div>
+
+
+
+
+
+        </div>
+
+        <center>
+
+            <div id="resultado_final" style="display: none;">
+                <div id="pontos">
+                    
+                </div> <br>
+                <div id="img_resultado"></div> <br> <br>
+                <button onclick="retornar()">Retornar</button>
+            </div>
+
+        </center>
+    </body>
+
+</html>
+
+<script>
+
+    var respostas = ['RACIONAIS',
+        'EVIDENCIAS',
+        'BUM BUM TAM TAM',
+        'ROCK',
+        'FUNCK'];
+
+    var perguntas = ['Qual a música sertaneja mais amada em festas?',
+        'Qual o Funk mais ciêntifico que existe?',
+        'O Rock in Rio é um festival de...?',
+        'Qual o rítmo que mais movimenta o esqueleto?'];
+
+    var click = 0;
+
+    var acertos = 0;
+
+
+    function tela_um() {
+        tela1.style.display = "none";
+        tela2.style.display = "block";
+
+
+
+    }
+
+
+    function verificar1() {
+        tela1.style.display = "none";
+        click++;
+        var input_resposta = input_respostas.value.toUpperCase();
+
+
+        if (click == 1 && input_resposta == respostas[0]) {
+            acertos++;
+            span_pergunta.innerHTML = `${perguntas[0]}`;
+
+            imagem_dica.innerHTML = `<img src="img/evidencia.jpg" alt="" height="300px">`;
+
+
+        }
+
+        else if (click == 1 && input_resposta != respostas[0]) {
+            span_pergunta.innerHTML = `${perguntas[0]}`;
+
+            imagem_dica.innerHTML = `<img src="img/evidencia.jpg" alt="" height="300px">`;
+        }
+
+        else if (click == 2 && input_resposta == respostas[1]) {
+            acertos++;
+            span_pergunta.innerHTML = `${perguntas[1]}`;
+            imagem_dica.innerHTML = `<img src="img/vacina.jpg" alt="" height="300px">`;
+        }
+
+        else if (click == 2 && input_resposta != respostas[1]) {
+            span_pergunta.innerHTML = `${perguntas[1]}`;
+            imagem_dica.innerHTML = `<img src="img/vacina.jpg" alt="" height="300px">`;
+        }
+
+        else if (click == 3 && input_resposta == respostas[2]) {
+            acertos++;
+            span_pergunta.innerHTML = `${perguntas[2]}`;
+            imagem_dica.innerHTML = `<img src="img/rock.jpg" alt="" height="300px">`;
+        }
+
+        else if (click == 3 && input_resposta != respostas[2]) {
+            span_pergunta.innerHTML = `${perguntas[2]}`;
+            imagem_dica.innerHTML = `<img src="img/rock.jpg" alt="" height="300px">`;
+        }
+
+        else if (click == 4 && input_resposta == respostas[3]) {
+            acertos++;
+            span_pergunta.innerHTML = `${perguntas[3]}`;
+            imagem_dica.innerHTML = `<img src="img/esqueleto.gif" alt="" height="300px">`;
+        }
+
+
+        else if (click == 4 && input_resposta != respostas[3]) {
+            span_pergunta.innerHTML = `${perguntas[3]}`;
+            imagem_dica.innerHTML = `<img src="img/esqueleto.gif" alt="" height="300px">`;
+        }
+
+
+        else if (click == 5 && acertos >= 3) {
+            tela1.style.display = "none";
+            tela2.style.display = "none";
+            resultado_final.style.display = "block";
+            pontos.innerHTML += ` <h1> Você realizou ${acertos} acertos </h1>`;
+            img_resultado.innerHTML = `<h2>Parabéns você é muito bom, já pode ser um produtor musical! </h2> <br>
+            <img src="img/giphy.gif" alt="" height="300px">`;
+
+        }
+
+        else if (click == 5 && acertos < 3) {
+            tela1.style.display = "none";
+            tela2.style.display = "none";
+            resultado_final.style.display = "block";
+            pontos.innerHTML += ` <h1> Você realizou ${acertos} acertos </h1>`;
+            img_resultado.innerHTML = `<h2>Poxa vida, você precisa ouvir mais músicas!</h2> <br>
+            <img src="img/perdeu.gif" alt="" height="300px">`;
+
+    
+
+        }
+
+
+    }
+
+    function retornar() {
+
+        window.location.href="tempo-real.html";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

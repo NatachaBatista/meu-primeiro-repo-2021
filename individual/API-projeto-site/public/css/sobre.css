@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+        /* SÓ COLOCAR QUANDO COLOCAR COR NO HEADER */
+    margin: 0;
+        /* SÓ COLOCAR QUANDO COLOCAR COR NO HEADER */
+     /* background: url(../img/artigo-evento.jpg); */
+     opacity:1;
+      background-size: cover;
+}
+
+.container { 
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+.header {
+    background-color: black;
+    padding: 20px 0;
+        /*overflow: auto; /* cuidado*/
+    /* height: 100px; */
+        /*ATENÇÃO VOLTA A NAV AQUI SE SUMIR*/
+    
+}
+
+.header .container {
+    height: 80px;
+}
+
+
+/* .header h1 {
+    margin: 0;
+    padding: 0;
+    float: left;
+        
+    margin-top: 20px;
+    color: white;
+} */
+
+.header ul {
+    list-style-type: none;
+       
+    float: right;
+      
+    margin-top: 30px;
+}
+
+.header li {
+    float: left;
+        
+    margin-left: 18px;
+      
+}
+
+.header a {
+    text-transform: uppercase;
+    color: white;
+}
+
+.header a:hover {
+    font-weight: bold;
+}
+
+.header .current {
+    color: purple;
+    font-weight: bold;
+}
+
+.assunto-grande {
+width: 45%;
+color:black;
+padding-top: 0;
+margin-top: 25px;
+float: left;
+}
+
+.assunto-grande2 img{
+    margin-top: 25px;
+    height: 100px ;
+}
+
+.conteudo {
+ margin-top: 100px;
+ background-color: rgb(236, 220, 236);
+ width: 1000px;
+ height: 425px;
+
+}
+
+
+

@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+        background-color: #ecf0f1;
+}
+
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+.header {
+    background-color: #232323;
+    border-right: 3px solid purple;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+}
+
+.header .container .highlight {
+    color: purple;
+}
+
+.usuario {
+    width: 75%;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.usuario h3 {
+    font-weight: 100;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    margin: 35px;
+    color: white;
+    font-size: 25px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid purple;
+}
+
+.header ul {
+    list-style-type: none;
+    float: left;
+    margin-top: 40px;
+}
+
+.header li {
+    margin: 0 0 30px 0;
+}
+
+.header a {
+    text-transform: uppercase;
+    color: white;
+}
+
+.header a:hover {
+    font-weight: bold;
+}
+
+.header .current {
+    color: purple;
+    font-weight: bold;
+}
+    
+.img_tela1 {
+    height: 300px;
+}
+
+.titulo_tela1 {
+    color: purple ;
+}
+
+.faixa {
+    margin-top: 50px;
+    width: 500px;
+    height: 50px;
+    background-color: black;
+
+}
+
+.quiz {
+text-transform: uppercase;
+border-top: 500px;
+
+}
+
+
+button {
+ width: 300px;
+ height: 50px;
+ border-radius: 50px;
+ color: white;
+ background-color: black;
+ text-transform: uppercase;
+}
+
+.titulo_tela1{
+    padding-top: 50px;
+    text-transform: uppercase;
+}
+
+.input-quiz {
+    width: 300px;
+    margin-top: 50px;
+    
+}
+
+.span_style{
+    padding-top:20px;
+   
+}
+
+#tela2 {
+ float: right;
+ width: 80%;
+ height: 100vh;
+ 
+}
+
+.primeira_tela {
+    float: right;
+    width: 80%;
+   }
+
+#resultado_final {
+    float: right;
+   width: 80%;
+    height: 100vh;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTO- Cadastro</title>
+    <link rel="shortcut icon" href="img/Nmusic-logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato-e-login.css">
+</head>
+<body>
+    <!--header inicio-->
+    <div class="header">
+        <div class="container">
+            <img src="img/Nmusic-logo.png" alt="" style="height: 60px; float: left; width: 100px; margin-top: 0px";>
+            
+            <div class="nav">
+                <ul>"
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="cadastro.html"class="current">Cadastro</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--header fim-->
+
+    <div class="contato">
+        <div class="container">
+            <h1>CADASTRE-SE!</h1>
+            <div class="formulario">
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    Nome completo
+                    <input type="text" name="nome" class="input-padrao" autofocus="autofocus" placeholder="Nome e sobrenome" required minlength="4">
+                    
+                    Email
+                    <input type="text" name="login_html" class="input-padrao" placeholder="email" required minlength="4">
+                    
+                    Senha
+                    <input type="password" name="senha" class="input-padrao" placeholder="***************" required minlength="4">
+                    
+                    Data Nascimento
+                    <input type="date" name="data_nasc" class="input-padrao" placeholder="data de nasciemento" required minlength="4">
+
+                    Genero Favorito 
+                    <select name="genero_fav" id="genero_fav" style="width: 200px;">
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="funk">Funk</option>
+                        <option value="rap">Rap</option>
+                        <option value="sertanejo">Sertanejo</option>
+                    </select>  <br> <br>
+
+                    <input type="submit" id="btn_entrar" value="Cadastrar" class="btn-green">
+                </form>
+
+                <img src="aguarde-orange.gif" id="img_aguarde" style="display: none; width:100px">
+    
+    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+        Erro no cadastro
+    </div>
+
+            </div>
+            <div class="imagem-lateral">
+                <img src="img/Music-bro (3).svg">
+            </div>
+        </div>
+    </div>
+
+    
+
+     
+</body>
+</html>
+
+<script>
+
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+</script>
